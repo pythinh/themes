@@ -1,3 +1,3 @@
 # themes
 
-- [thinhblog](/thinhblog)
+- [thinhblog](/themes/thinhblog)
