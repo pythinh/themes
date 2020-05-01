@@ -1,0 +1,6 @@
+/* Thinh Blog CSS */
+
+.card-img-top:hover {
+    box-shadow: 5px 5px 5px gray;
+    transform: translate(-1%, -2%);
+}
