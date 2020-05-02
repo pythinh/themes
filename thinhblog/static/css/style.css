@@ -4,3 +4,12 @@
     box-shadow: 5px 5px 5px gray;
     transform: translate(-1%, -2%);
 }
+
+footer .container {
+    opacity: .3;
+    transition: opacity .5s;
+}
+
+footer .container:hover {
+    opacity: 1;
+}
