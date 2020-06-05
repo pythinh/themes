@@ -5,8 +5,10 @@
 }
 
 article {
-    margin: 0 auto;
-    max-width: 728px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 body {
@@ -38,9 +40,10 @@ footer a:hover {
 
 h1 {
     border-bottom: 2px solid #eeeeee;
-    font-size: 3rem;
+    font-size: 5rem;
     font-style: italic;
     margin-bottom: 1rem;
+    padding-bottom: .5rem;
     text-transform: uppercase;
 }
 
@@ -51,4 +54,13 @@ h1 span {
 main {
     border: 3px solid #00adb5;
     padding: 1.5rem;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+ul:nth-last-child() {
+    margin-right: 0;
 }
