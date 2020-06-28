@@ -9,9 +9,20 @@ footer .container:hover {
     opacity: 1;
 }
 
+.card > a {
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px 1px #6c757d !important;
+}
+
+.card-img-top {
+    transition: transform .5s;
+}
+
 .card-img-top:hover {
-    box-shadow: 5px 5px 5px gray;
-    transform: translate(-1%, -2%);
+    transform: scale(1.15);
 }
 
 #formSearch {
