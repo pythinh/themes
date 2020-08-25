@@ -63,6 +63,10 @@ header {
     transform: translateY(-1px);
 }
 
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s backwards;
+}
+
 .btn-white {
     background-color: #fff;
     color: #777;
@@ -79,6 +83,7 @@ header {
 }
 
 .heading-primary__main {
+    animation: moveInLeft 1s ease-out;
     display: block;
     font-size: 62px;
     font-weight: 400;
@@ -86,6 +91,7 @@ header {
 }
 
 .heading-primary__sub {
+    animation: moveInRight 1s ease-out;
     display: block;
     font-size: 20px;
     font-weight: 700;
@@ -108,4 +114,43 @@ header {
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
