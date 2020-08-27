@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@ body {
     line-height: 1.5;
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 30px;
 }
 
@@ -22,12 +24,16 @@ header {
     position: relative;
 }
 
+html {
+    font-size: 10px;
+}
+
 .btn,
 .btn:link,
 .btn:visited {
     border-radius: 100px;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 15px 40px;
     position: relative;
     text-decoration: none;
@@ -63,17 +69,35 @@ header {
     transform: translateY(-1px);
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s backwards;
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: inherit;
+}
+
+.header__logo {
+    height: 70px;
+}
+
+.header__logo-box {
+    left: 30px;
+    position: absolute;
+    top: 30px;
+}
+
+.header__text-box {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .heading-primary {
@@ -82,38 +106,20 @@ header {
     text-transform: uppercase;
 }
 
-.heading-primary__main {
+.heading-primary--main {
     animation: moveInLeft 1s ease-out;
     display: block;
-    font-size: 62px;
+    font-size: 6.2rem;
     font-weight: 400;
     letter-spacing: 15px;
 }
 
-.heading-primary__sub {
+.heading-primary--sub {
     animation: moveInRight 1s ease-out;
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 18px;
-}
-
-.logo {
-    height: 70px;
-}
-
-.logo-box {
-    left: 30px;
-    position: absolute;
-    top: 30px;
-}
-
-.text-box {
-    left: 50%;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 @keyframes moveInLeft {
