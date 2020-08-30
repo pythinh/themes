@@ -1,3 +1,3 @@
 @echo off
 
-sass --watch --no-source-map scss\main.scss css\style.css
+sass --watch scss\main.scss css\style.css
