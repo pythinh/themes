@@ -536,6 +536,59 @@ body {
   width: 15rem;
 }
 
+.footer {
+  background-color: #333;
+  color: #f7f7f7;
+  font-size: 1.4rem;
+  padding: 10rem 0;
+}
+.footer__copyright {
+  border-top: 1px solid #f7f7f7;
+  float: right;
+  padding-top: 2rem;
+  width: 70%;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.footer__link:link, .footer__link:visited {
+  background-color: #333;
+  border-radius: 5rem;
+  color: #f7f7f7;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.footer__link:hover, .footer__link:active {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  color: #5a73fc;
+  transform: rotate(5deg) scale(1.05);
+}
+.footer__list {
+  list-style: none;
+}
+.footer__logo {
+  height: auto;
+  width: 20rem;
+}
+.footer__logo-box {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+.footer__navigation {
+  border-top: 1px solid #f7f7f7;
+  display: inline-block;
+  padding-top: 2rem;
+}
+.footer__title {
+  color: #5a73fc;
+  display: block;
+}
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../img/background1.jpg");
   background-position: top;
