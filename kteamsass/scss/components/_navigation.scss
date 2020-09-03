@@ -1,0 +1,126 @@
+.navigation {
+    &__background {
+        background-image: radial-gradient($color-primary, $color-primary-dark);
+        border-radius: 50%;
+        height: 6rem;
+        position: fixed;
+        scale: 80;
+        top: 6.5rem;
+        right: 6.5rem;
+        transition: transform .8s;
+        width: 6rem;
+        z-index: 1000;
+    }
+    &__button {
+        background-color: $color-white;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color-black, .15);
+        cursor: pointer;
+        height: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        text-align: center;
+        width: 7rem;
+        z-index: 2000;
+    }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+    &__checkbox {
+        display: none;
+    }
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__icon {
+        position: relative;
+        margin-top: 3.2rem;
+        &,
+        &::after,
+        &::before {
+            background-color: $color-grey-dark-1;
+            display: inline-block;
+            height: .3rem;
+            width: 3.5rem;
+
+        }
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            transition: all .2s;
+            left: 0;
+        }
+        &::after {
+            top: .8rem;
+        }
+        &::before {
+            top: -.8rem;
+        }
+    }
+    &__item {
+        margin: 1rem;
+    }
+    &__link {
+        &:link,
+        &:visited {
+            background-image: radial-gradient(
+                150% 200% ellipse at 115%,
+                $color-white 0%,
+                $color-white 50%,
+                transparent 50%);
+            background-size: 252%;
+            color: $color-white;
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .4s;
+        }
+        &:hover,
+        &:active {
+            background-position: 100%;
+            border-radius: 100rem;
+            color: $color-primary;
+            transform: translateX(1rem);
+        }
+    }
+    &__list {
+        @include abscenter;
+        list-style: none;
+        text-align: center;
+    }
+    &__nav {
+        border-radius: 50%;
+        height: 100vh;
+        opacity: 0;
+        position: fixed;
+        scale: 80;
+        top: 0;
+        right: 0;
+        transition: all .8s;
+        width: 0;
+        z-index: 1500;
+    }
+}
