@@ -35,9 +35,9 @@
       </div>
       <div class="col-1-of-2">
         <div class="composition">
-          <img src="./img/humangroups1.jpg" class="composition__photo composition__photo--p1" alt="photo1">
-          <img src="./img/humangroups2.jpg" class="composition__photo composition__photo--p2" alt="photo2">
-          <img src="./img/humangroups3.jpg" class="composition__photo composition__photo--p3" alt="photo3">
+          <img src="./img/humangroups1.jpg" class="composition__photo composition__photo--p1" alt="photo1" srcset="./img/humangroups1.jpg 1920w, ./img/humangroups1-small.png 600w" sizes="(max-width: 900px) 13vw, (max-width: 600px) 20vw, 270px">
+          <img src="./img/humangroups2.jpg" class="composition__photo composition__photo--p2" alt="photo2" srcset="./img/humangroups2.jpg 1920w, ./img/humangroups2.jpg 600w" sizes="(max-width: 900px) 13vw, (max-width: 600px) 20vw, 270px">
+          <img src="./img/humangroups3.jpg" class="composition__photo composition__photo--p3" alt="photo3" srcset="./img/humangroups3.jpg 1920w, ./img/humangroups3.jpg 600w" sizes="(max-width: 900px) 13vw, (max-width: 600px) 20vw, 270px">
         </div>
       </div>
     </div>
@@ -241,7 +241,10 @@
   </div>
   <footer class="footer">
     <div class="footer__logo-box">
-      <img src="./img/logopng.png" alt="photo" class="footer__logo">
+      <picture>
+        <source media="(min-width: 600px)" srcset="./img/logopng.png">
+        <img alt="photo" class="footer__logo" src="./img/logopng-small.png">
+      </picture>
       <h3 class="heading-secondary footer__title">SelfTaught</h3>
     </div>
     <div class="row">

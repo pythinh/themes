@@ -10,6 +10,14 @@
         transition: transform .8s;
         width: 6rem;
         z-index: 1000;
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+        @include respond(phone) {
+            top: 4rem;
+            right: 4rem;
+        }
     }
     &__button {
         background-color: $color-white;
@@ -23,6 +31,14 @@
         text-align: center;
         width: 7rem;
         z-index: 2000;
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
     &__button:hover &__icon::after {
         top: 1rem;
